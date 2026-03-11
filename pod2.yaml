@@ -10,4 +10,4 @@ spec:
     - name: flower-app-container
       image: asadoblivion/flower-app:v2
       ports:
-        - conatinerPort: 3000
+        - containerPort: 3000
