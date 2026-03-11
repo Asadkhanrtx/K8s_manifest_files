@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: flower-app-rs
+  namespace: asad-ns
+  labels:
+  apps: flower
+specs:
+  replicas: 2
+  selector:
+    matchLabels:
+    app: flower-web
+  template:
+    metadata:
+      labels:
+        apps: flower-web
+    spec:
+      containers:
+        - name: flower-container
+          image: asadoblivion/flower-app:v2
+          ports:
+            - containerPort: 3000
+
