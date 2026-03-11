@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: ey-cart-pod
   namespace: asad-ns
-  lables:
+  labels:
     app: ey-cart
 spec:
   containers:
