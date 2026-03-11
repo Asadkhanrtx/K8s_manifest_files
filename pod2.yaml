@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: flower-app-container
-      image: asadoblivion/flower-app:tagname
+      image: asadoblivion/flower-app:v2
       ports:
         - conatinerPort: 3000
