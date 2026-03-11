@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: flower-app
   namespace: asad-ns
-  lables:
+  labels:
     app: flower-app
 spec:
   containers:
