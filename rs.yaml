@@ -12,7 +12,7 @@ spec: # It defines the behaviour of the ReplicaSet
       app: web
   template: # It contains pod definition
     metadata:
-      lables:
+      labels:
         app: web
     spec: # It contains the container definition
       containers:
