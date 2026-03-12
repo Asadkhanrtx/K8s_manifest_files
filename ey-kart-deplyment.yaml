@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ey-cart-rs
+  name: ey-cart-deployement
   namespace: asad-ns
   labels:
     app: cart
