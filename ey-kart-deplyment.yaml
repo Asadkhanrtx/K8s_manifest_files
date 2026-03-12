@@ -1,22 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ey-cart-deployement
-  namespace: asad-ns
+  name: ey-cart-deployment
   labels:
-    app: cart
-spec: # It defines the behaviour of the ReplicaSet
+    app: ey-cart
+spec:
   replicas: 3
-  selector: #It defines how the replicaSet finds which Pods to manage
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
+  selector:
     matchLabels:
-      app: web
-  template: # It contains pod definition
+      app: ey-cart
+
+  template:
     metadata:
       labels:
-        app: web
-    spec: # It contains the container definition
+        app: ey-cart
+    spec:
       containers:
         - name: ey-cart-container
           image: muralisocial123/cart-page-example:1.0
           ports:
-            - containerPort: 80
+            - containerPort: 3000
