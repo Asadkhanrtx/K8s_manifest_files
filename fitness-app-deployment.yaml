@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: fitness-app-container
-          image: muralisocial123/transaction-app:v1.0.0
+          image: muralisocial123/fitness-app:v1.0.1
           ports:
             - containerPort: 3000
 ---
