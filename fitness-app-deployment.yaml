@@ -39,5 +39,5 @@ spec:
     - port: 3001 #It is the port on which service will be exposed on the internet.
       targetPort: 5000 #It is the port in which the application id running inside the container
       protocol: TCP
-  type: ClusterIP # It is the default type of service. It exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType. If you do not specify a type, this is what will be used.
+  type: NodePort # It is the default type of service. It exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType. If you do not specify a type, this is what will be used.
     
